@@ -1,0 +1,32 @@
+<sdf version="1.6">
+  <world name="default">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+    
+    <include><uri>model://turtlebot3_house</uri></include>
+
+    <include>
+      <uri>model://qr_livingroom</uri>
+      <static>true</static>
+      <pose>-0.123 3.004 0.265 0 0 1.5707</pose>
+    </include>
+
+    <include>
+      <uri>model://qr_kitchen</uri>
+      <static>true</static>
+      <pose>7.385 0.550 0.552 0 0 -1.65</pose>
+    </include>
+
+    <include>
+      <uri>model://qr_bedroom</uri>
+      <static>true</static>
+      <pose>-5.245 -0.663 0.256 0 0 -1.542</pose>
+    </include>
+
+    <include>
+      <uri>model://qr_corridor</uri>
+      <static>true</static>
+      <pose>-5.575 1.002 0.216 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

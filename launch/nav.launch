@@ -1,0 +1,29 @@
+<launch>
+  <arg name="model" default="waffle_pi"/>
+  <arg name="map_file" default="$(find ktun_cleaning_robot)/maps/house.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="true"/>
+
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+    <arg name="model" value="$(arg model)" />
+  </include>
+
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch">
+    <arg name="initial_pose_x" value="0.5"/>
+    <arg name="initial_pose_y" value="0.5"/>
+    <arg name="initial_pose_a" value="0.0"/>
+    <arg name="scan_topic" value="scan"/>
+  </include>
+
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+    <arg name="model" value="$(arg model)" />
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find ktun_cleaning_robot)/config/navigation.rviz"/>
+  </group>
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+  <param name="use_sim_time" value="true"/>
+
+  <!-- 1 Gazebo + Robot -->
+  <include file="$(find ktun_cleaning_robot)/launch/sim.launch"/>
+
+  <!-- 2 Navigation -->
+  <include file="$(find ktun_cleaning_robot)/launch/nav.launch"/>
+
+  <!-- 3 QR + FSM -->
+  <include file="$(find ktun_cleaning_robot)/launch/task_manager.launch"/>
+</launch>
+

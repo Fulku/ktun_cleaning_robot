@@ -1,0 +1,31 @@
+<launch>
+
+  <!-- Use simulation time -->
+  <param name="/use_sim_time" value="true"/>
+
+  <!-- TurtleBot3 model -->
+  <env name="TURTLEBOT3_MODEL" value="burger"/>
+
+  <!-- World file -->
+  <arg name="world_file"
+       default="$(find ktun_cleaning_robot)/world/turtlebot3_house_qr.world"/>
+
+  <!-- Launch Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_file)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+  </include>
+
+  <!-- Robot description with CAMERA -->
+  <param name="robot_description"
+         command="$(find xacro)/xacro $(find ktun_cleaning_robot)/urdf/turtlebot3_burger_camera.urdf.xacro"/>
+
+  <!-- Spawn TurtleBot3 -->
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_turtlebot3"
+        args="-urdf -model turtlebot3 -param robot_description
+              -x 0 -y 0 -z 0.01"/>
+
+</launch>
+

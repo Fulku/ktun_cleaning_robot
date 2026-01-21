@@ -1,0 +1,13 @@
+material QRCorridor
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture corridor.png
+      }
+    }
+  }
+}

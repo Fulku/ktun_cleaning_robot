@@ -1,0 +1,36 @@
+rooms:
+  - name: 'KITCHEN'
+    entry_pose:
+      position: {x: 5.1868, y: 0.0249, z: 0.0}
+      orientation: {x: 0.0, y: 0.0, z: -0.0225, w: 0.9997}
+    cleaning_params:
+      mode: "zigzag_duration"
+      duration: 15
+    qr_data: "ROOM=KITCHEN"
+
+  - name: 'LIVINGROOM'
+    entry_pose:
+      position: {x: -1.1006, y: 2.6749, z: 0.0}
+      orientation: {x: 0.0, y: 0.0, z: 0.707, w: 0.707} # KUZEYE BAKIYOR
+    cleaning_params:
+      mode: "zigzag_duration"
+      duration: 20
+    qr_data: "ROOM=LIVINGROOM"
+
+  - name: 'CORRIDOR'
+    entry_pose:
+      position: {x: -5.5076, y: 2.7366, z: 0.0}
+      orientation: {x: 0.0, y: 0.0, z: -0.7570, w: 0.6534}
+    cleaning_params:
+      mode: "zigzag_duration"
+      duration: 10
+    qr_data: "ROOM=CORRIDOR"
+
+  - name: 'BEDROOM'
+    entry_pose:
+      position: {x: -5.8, y: 0.5, z: 0.0}
+      orientation: {x: 0.0, y: 0.0, z: -0.3648, w: 0.9310}
+    cleaning_params:
+      mode: "zigzag_duration"
+      duration: 15
+    qr_data: "ROOM=BEDROOM"

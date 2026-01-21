@@ -1,0 +1,10 @@
+<launch>
+  <node pkg="ktun_cleaning_robot"
+        type="task_manager.py"
+        name="task_manager"
+        output="screen">
+    <param name="mission_file"
+           value="$(find ktun_cleaning_robot)/config/mission.yaml"/>
+  </node>
+</launch>
+

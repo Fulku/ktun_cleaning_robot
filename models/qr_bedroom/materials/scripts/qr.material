@@ -1,0 +1,13 @@
+material QRBedroom
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture bedroom.png
+      }
+    }
+  }
+}

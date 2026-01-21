@@ -1,0 +1,13 @@
+material QRKitchen
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture kitchen.png
+      }
+    }
+  }
+}

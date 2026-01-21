@@ -1,0 +1,13 @@
+material Gazebo/QR
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture livingroom.png
+      }
+    }
+  }
+}

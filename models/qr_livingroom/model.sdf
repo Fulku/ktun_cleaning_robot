@@ -1,0 +1,24 @@
+<sdf version="1.4">
+  <model name="qr_livingroom">
+    <static>true</static>
+
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.4 0.01 0.4</size>
+          </box>
+        </geometry>
+
+        <material>
+          <script>
+            <uri>model://qr_livingroom/materials/scripts</uri>
+            <uri>model://qr_livingroom/materials/textures</uri>
+            <name>Gazebo/QR</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
