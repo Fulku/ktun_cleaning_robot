@@ -24,13 +24,7 @@ class WallFollower:
 
     def scan_cb(self, msg):
         # Lidar verisini 5 bölgeye ayırıyoruz
-        # Turtlebot3 Lidar 360 derece: 0=Arka, 90=Sağ, 180=Ön, 270=Sol (veya tam tersi konfigürasyona göre değişebilir)
-        # Genellikle: 0=Ön, 90=Sol, 270=Sağ. Simülasyonda deneyerek emin olunmalı.
-        # Turtlebot3 Waffle Pi standart: 0 derece ön taraf.
-        
-        # Ön (0-30 ve 330-360), Sol (30-90), Sağ (270-330) gibi basitleştiriyoruz
-        # Lidar ranges array boyutu genelde 360'tır.
-        
+       
         size = len(msg.ranges)
         # Basit bölge ortalamaları (min değer alarak güvenlik sağlıyoruz)
         self.regions = {
@@ -61,7 +55,7 @@ class WallFollower:
             msg.linear.x = 0.15
             msg.angular.z = 0.2
             
-        # Durum 4: Her şey yolunda, duvarı sağa alıp ilerle (Düzeltme hareketi)
+        # Durum 4: Her şey yolunda, duvarı sağa alıp ilerle
         else:
             msg.linear.x = 0.2
             msg.angular.z = 0.0

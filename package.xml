@@ -2,8 +2,8 @@
 <package format="2">
   <name>ktun_cleaning_robot</name>
   <version>1.0.0</version>
-  <description>KTUN Robotik Dersi Final Projesi - Otonom Temizlik ve QR Doğrulama</description>
-  <maintainer email="user@email.com">Ogrenci Ismi</maintainer>
+  <description>The ktun_cleaning_robot package</description>
+  <maintainer email="fulku@email.com">fulku</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>catkin</buildtool_depend>

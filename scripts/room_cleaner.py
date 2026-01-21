@@ -76,7 +76,7 @@ class SystematicCleaner:
         
         print(f"--- SISTEMATIK TARAMA BASLADI ({self.duration} SN) ---", flush=True)
         
-        # Başlangıçta kısa bir bekle (Lidar verisi otursun)
+
         rospy.sleep(1.0)
         
         while not rospy.is_shutdown():
@@ -86,8 +86,7 @@ class SystematicCleaner:
 
             twist = Twist()
             
-            # --- MANTIK GÜNCELLEMESİ ---
-            # Mesafeyi 0.35 metreye düşürdük (Daha yakına girebilir)
+            # Mesafeyi 0.35 metreye düşürdük
             if self.front_dist > 0.35:
                 twist.linear.x = 0.25
                 self.cmd_pub.publish(twist)

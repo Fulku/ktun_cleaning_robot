@@ -14,7 +14,7 @@ class QRReader:
         self.bridge = CvBridge()
         self.qr_pub = rospy.Publisher("/qr_result", String, queue_size=10)
         
-        # Kamera topic ismini buradan değiştirebilirsiniz
+
         self.camera_topic = "/camera/rgb/image_raw"
         
         self.image_sub = rospy.Subscriber(self.camera_topic, Image, self.callback)
@@ -25,7 +25,7 @@ class QRReader:
 
     def callback(self, data):
         self.frame_count += 1
-        # Her 100 karede bir terminale "Kamera Çalışıyor" yaz (Spam olmasın diye)
+
         if self.frame_count % 100 == 0:
             rospy.loginfo("Kamera goruntusu aliniyor... (Sistem aktif)")
 
@@ -62,7 +62,7 @@ class QRReader:
             cv2.putText(cv_image, qr_data, (obj.rect.left, obj.rect.top - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
             
-            # Terminale yaz (Her seferinde değil, saniyede 1 kere)
+            # Terminale yaz 
             if rospy.get_time() - self.last_log_time > 1.0:
                 rospy.loginfo(f"QR BULUNDU VE YAYINLANDI: {qr_data}")
                 self.last_log_time = rospy.get_time()

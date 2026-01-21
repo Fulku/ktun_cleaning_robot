@@ -75,12 +75,12 @@ class TaskManager:
             return False
         return self.client.get_state() == actionlib.GoalStatus.SUCCEEDED
 
-   # retries değeri (Daha sabırlı olacak)
+
     def verify_qr_logic(self, expected, retries=30):
         rospy.loginfo(f"--- QR VERIFICATION START ---")
         rospy.loginfo(f"Expected QR: '{expected}'")
         
-        # Hedefe varınca 2 saniye bekle ki kamera odaklansın/robot titresimi dursun
+
         rospy.sleep(2.0)
        
         
@@ -113,8 +113,6 @@ class TaskManager:
         
         # python3 -u parametresi eklendi: Çıktıları anında terminale basar
         cmd = f"rosrun ktun_cleaning_robot room_cleaner.py _duration:={duration}"
-        # VEYA script'i direkt python ile çağırarak unbuffered yapabiliriz (daha garanti):
-        # cmd = f"python3 -u $(rospack find ktun_cleaning_robot)/scripts/room_cleaner.py _duration:={duration}"
    
         subprocess.call(cmd, shell=True)
 

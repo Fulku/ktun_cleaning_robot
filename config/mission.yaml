@@ -11,7 +11,7 @@ rooms:
   - name: 'LIVINGROOM'
     entry_pose:
       position: {x: -1.1006, y: 2.6749, z: 0.0}
-      orientation: {x: 0.0, y: 0.0, z: 0.707, w: 0.707} # KUZEYE BAKIYOR
+      orientation: {x: 0.0, y: 0.0, z: 0.707, w: 0.707}
     cleaning_params:
       mode: "zigzag_duration"
       duration: 20
