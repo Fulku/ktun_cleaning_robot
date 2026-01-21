@@ -84,6 +84,26 @@ source devel/setup.bash
 Sistem, her alt bileşen kontrol edilebilir olacak şekilde ayrı launch dosyalarıyla çalıştırılmaktadır.
 
 ### 5.1 Gazebo Simülasyonu
+<<<<<<< HEAD
+
+```bash
+roslaunch ktun_cleaning_robot sim.launch
+```
+
+### 5.2 Navigasyon (AMCL + move_base)
+
+```bash
+roslaunch ktun_cleaning_robot nav.launch
+```
+
+Bu aşamada RViz üzerinden **2D Pose Estimate** aracı ile robotun başlangıç konumu belirlenir.
+
+### 5.3 Görev Yöneticisi ve QR Okuyucu
+
+```bash
+roslaunch ktun_cleaning_robot task_manager.launch
+```
+=======
 
 ```bash
 roslaunch ktun_cleaning_robot sim.launch
