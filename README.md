@@ -8,7 +8,7 @@
 
 ## 1. Proje Tanımı ve Amacı
 
-Bu proje, **KTÜN Robotiğe Giriş dersi final uygulama ödevi** kapsamında geliştirilmiştir. Projenin temel amacı; Gazebo simülasyon ortamında çalışan bir **TurtleBot3 mobil robotunun**, ev ortamının haritasını çıkardıktan sonra (SLAM) belirli odalara otonom olarak gitmesi, her oda girişinde bulunan **QR kodlar** aracılığıyla doğru odada olduğunu doğrulaması ve doğrulama başarılı ise o oda içerisinde **önceden tanımlı waypoint kullanmadan**, sensör verilerine dayalı **alan kapsama (coverage) temelli temizlik algoritması** ile tüm odayı dolaşmasıdır.
+Bu proje, **KTÜN Robotiğe Giriş dersi bütünleme uygulama ödevi** kapsamında geliştirilmiştir. Projenin temel amacı; Gazebo simülasyon ortamında çalışan bir **TurtleBot3 mobil robotunun**, ev ortamının haritasını çıkardıktan sonra (SLAM) belirli odalara otonom olarak gitmesi, her oda girişinde bulunan **QR kodlar** aracılığıyla doğru odada olduğunu doğrulaması ve doğrulama başarılı ise o oda içerisinde **önceden tanımlı waypoint kullanmadan**, sensör verilerine dayalı **alan kapsama (coverage) temelli temizlik algoritması** ile tüm odayı dolaşmasıdır.
 
 Bu proje; gerçek süpürge robotlarının çalışma prensiplerini esas alarak, mobil robotlarda **haritalama, lokalizasyon, navigasyon, görüntü işleme, görev planlama (task management)** ve **reaktif hareket** yaklaşımlarını bütünleşik bir sistem halinde sunmaktadır.
 
@@ -109,7 +109,7 @@ roslaunch ktun_cleaning_robot task_manager.launch
 
 Robotun tüm davranışları `task_manager.py` dosyası içerisinde tanımlanmış bir **durum makinesi (State Machine)** ile yönetilmektedir.
 
-> **Not:** Bu projede **oda içi temizlik için kesinlikle waypoint kullanılmamıştır**.
+> **Not:** Bu projede **oda içi temizlik için waypoint kullanılmamıştır**.
 
 ### Durumlar:
 
@@ -184,7 +184,6 @@ Bu proje kapsamında TurtleBot3 robotu;
 * En az dört farklı oda için giriş noktalarına otonom olarak gitmiş,
 * QR kodlar aracılığıyla oda doğrulaması yapmış,
 * **Oda içi temizlik görevlerini önceden tanımlı waypoint kullanmadan**, sensör tabanlı kapsama algoritması ile gerçekleştirmiş,
-* Tüm sürecin sonunda detaylı bir temizlik raporu üretmiştir.
 
 ---
 
