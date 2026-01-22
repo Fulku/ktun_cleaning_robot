@@ -109,20 +109,6 @@ roslaunch ktun_cleaning_robot task_manager.launch
 roslaunch ktun_cleaning_robot sim.launch
 ```
 
-### 5.2 Navigasyon (AMCL + move_base)
-
-```bash
-roslaunch ktun_cleaning_robot nav.launch
-```
-
-Bu aşamada RViz üzerinden **2D Pose Estimate** aracı ile robotun başlangıç konumu belirlenir.
-
-### 5.3 Görev Yöneticisi ve QR Okuyucu
-
-```bash
-roslaunch ktun_cleaning_robot task_manager.launch
-```
-
 ---
 
 ## 6. Algoritma ve Senaryo Akışı
